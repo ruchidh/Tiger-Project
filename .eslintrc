@@ -1,0 +1,35 @@
+{
+	"parser": "babel-eslint",
+	"extends": ["airbnb"],
+	"plugins": ["react", "jsx-a11y", "import"],
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"no-tabs": "off",
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"],
+		"no-underscore-dangle": "off",
+		"camelcase": "off",
+		"import/no-unresolved": [
+			2,
+			{ "ignore": ["^common-util", "css-util", "components", "helpers", "^store", "util"] }
+		],
+		"react/no-array-index-key": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"jsx-a11y/html-has-lang": "off",
+		"jsx-a11y/alt-text": "warn",
+		"jsx-a11y/mouse-events-have-key-events": "off",
+		"jsx-a11y/media-has-caption": "off",
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{
+				"components": ["Link"],
+				"specialLink": ["to", "hrefLeft", "hrefRight"],
+				"aspects": ["noHref", "invalidHref", "preferButton"]
+			}
+		]
+	}
+}
