@@ -1,12 +1,19 @@
 {
-  "name": "Tiger-Project",
+  "name": "Comet-Front",
   "version": "1.0.0",
   "description": "Learning React  Redux Next js",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "stop": "pm2 stop CometFront",
+    "start": "NODE_ENV=production NVM_DIR=~/.nvm pm2 start pm2.json",
+    "restart": "$npm_execpath run build && $npm_execpath run stop && NODE_ENV=production NVM_DIR=~/.nvm pm2 start pm2.json",
+    "clean": "rm -rf node_modules && rm -rf .docz && rm -rf .next && rm -rf yarn-error.log && rm -rf package-lock.json && $npm_execpath install",
+    "prod": "$npm_execpath run build && NODE_ENV=production node .",
+    "analyze": "ANALYZE=1 next build",
+    "analyze-log": "ANALYZE_LOG=1 next build && cat .next/stats.txt",
+    "autofix": "prettier-eslint --eslint-config-path .eslintrc --config .prettierrc --write \"{common-util,components,helpers,pages,server,store,util}/**/*.js\" && prettier-eslint --eslint-config-path .eslintrc --config .prettierrc --write \"{common-util,components,helpers,pages,server,store,util}/**/*.jsx\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +27,7 @@
   },
   "homepage": "https://github.com/ruchidh/Tiger-Project#readme",
   "dependencies": {
+    "antd": "^3.11.6",
     "axios": "^0.18.0",
     "checkit": "^0.7.0",
     "compression": "^1.7.3",
@@ -29,6 +37,7 @@
     "moment": "^2.23.0",
     "next": "^7.0.2",
     "next-redux-wrapper": "^2.1.0",
+    "nprogress": "^0.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-datepicker": "^2.0.0",
@@ -52,6 +61,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.9",
     "prettier": "^1.15.3",
     "prettier-eslint-cli": "^4.7.1",
     "webpack-bundle-analyzer": "^3.0.3",

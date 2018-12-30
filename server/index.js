@@ -14,12 +14,12 @@ app
 		server.use('/', routes);
 		server.get('/*', (req, res) => handle(req, res));
 
-		server.listen(process.env.PORT, err => {
+		server.listen(process.env.PORT, (err) => {
 			if (err) throw err;
 			console.log(`> Ready on http://localhost:${process.env.PORT}`);
 		});
 	})
-	.catch(ex => {
+	.catch((ex) => {
 		console.error(ex.stack);
 		process.exit(1);
 	});

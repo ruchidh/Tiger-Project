@@ -1,10 +1,11 @@
 // ./pages/index.js
 
 // Import React
-import React from 'react'
+import React from 'react';
 
 // Export an anonymous arrow function
 // which returns the template
 export default () => (
-  <h1>This is just so easy!</h1>
+	<h1>yess </h1>
 )
+;
