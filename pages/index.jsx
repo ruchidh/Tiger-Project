@@ -7,5 +7,4 @@ import React from 'react';
 // which returns the template
 export default () => (
 	<h1>yess </h1>
-)
-;
+);
