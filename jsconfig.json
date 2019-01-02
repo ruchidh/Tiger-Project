@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"common-util": ["./common-util"],
+			"components": ["./components"],
+			"helpers": ["./helpers"],
+			"store": ["./store"],
+			"util": ["./util"]
+		}
+	}
+}

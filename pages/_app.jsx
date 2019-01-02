@@ -6,10 +6,9 @@ import Head from 'next/head';
 import Router from 'next/router';
 import withRedux from 'next-redux-wrapper';
 
-import initStore from 'store';
-import { setStoreState } from 'store/route/actions';
-import * as Progress from 'util/progress';
-import 'react-dates/initialize';
+import initStore from '../store';
+import { setStoreState } from '../store/route/actions';
+import * as Progress from '../util/progress';
 
 class MyApp extends App {
 	static async getInitialProps({ Component: { getInitialProps }, ctx }) {

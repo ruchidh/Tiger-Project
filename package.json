@@ -4,7 +4,7 @@
   "description": "Learning React  Redux Next js",
   "main": "server/index.js",
   "scripts": {
-    "dev": "nodemon server/index.js",
+    "dev": "node .",
     "build": "next build",
     "stop": "pm2 stop TestFront",
     "start": "NODE_ENV=production NVM_DIR=~/.nvm pm2 start pm2.json",

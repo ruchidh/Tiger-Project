@@ -1,0 +1,22 @@
+{
+	"presets": ["next/babel", "@babel/preset-flow"],
+	"plugins": [
+		[
+			"module-resolver",
+			{
+				"root": ["./"],
+				"alias": {
+					"common-util": "./common-util",
+					"css-util": "./css-util",
+					"components": "./components",
+					"helpers": "./helpers",
+					"store": "./store",
+					"util": "./util"
+				}
+			}
+		],
+		["transform-react-remove-prop-types", { "removeImport": true }],
+		["babel-plugin-styled-components", { "ssr": true, "displayName": true, "preprocess": false }],
+		["inline-import", { "extensions": [".css"] }]
+	]
+}
