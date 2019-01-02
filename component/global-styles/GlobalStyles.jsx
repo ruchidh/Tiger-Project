@@ -50,8 +50,73 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'gt-eesti', sans-serif;
-  }
+    font-family: GreycliffCF-Regular;
+    line-height: 1.6;
+    width: auto !important;
+    margin: 0;
+    box-sizing: border-box;
+    color: #202020;
+}
+
+.font-Bold {
+    font-family: GreycliffCF-Bold;
+}
+
+.font-DemiBold {
+    font-family: GreycliffCF-DemiBold;
+}
+
+.font-Medium {
+    font-family: GreycliffCF-Medium;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+th {
+    text-align: inherit;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.m-r-20 {
+    margin-right: 20px;
+}
+
+.m-v-10 {
+    margin-bottom: 10px;
+}
 
   .ant-input {
     resize: none;
