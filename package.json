@@ -1,12 +1,12 @@
 {
-  "name": "Comet-Front",
+  "name": "Test-Front",
   "version": "1.0.0",
   "description": "Learning React  Redux Next js",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server/index.js",
     "build": "next build",
-    "stop": "pm2 stop CometFront",
+    "stop": "pm2 stop TestFront",
     "start": "NODE_ENV=production NVM_DIR=~/.nvm pm2 start pm2.json",
     "restart": "$npm_execpath run build && $npm_execpath run stop && NODE_ENV=production NVM_DIR=~/.nvm pm2 start pm2.json",
     "clean": "rm -rf node_modules && rm -rf .docz && rm -rf .next && rm -rf yarn-error.log && rm -rf package-lock.json && $npm_execpath install",
@@ -47,6 +47,8 @@
     "reactjs-toastr": "^1.1.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
     "styled-components": "^4.1.3",
     "styled-normalize": "^8.0.4"
   },

@@ -1,6 +1,6 @@
 [
     {
-        "name": "CometFront",
+        "name": "TestFront",
         "exec_interpreter": "node@8.11.2",
         "script": "server/index.js"
     }
