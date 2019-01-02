@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const H2 = styled.h2`
     font-family: GreyCliffCF-Bold;
-    background: grey;
+    margin: 0px;
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0,0.125);
 `;
 
 export const Container = styled.div`
@@ -11,13 +14,15 @@ export const Container = styled.div`
 `;
 
 export const LoginBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 40%;
     height: 200px;
     margin: 3em auto;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     text-align: center;
-    padding: 0px 20px;
 `;
 
 export const Header = styled.div`
@@ -34,4 +39,8 @@ export const SubContainer = styled.div`
   justify-content: space-between;
   display: -webkit-flex; /* Safari */
   -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+`;
+
+export const LoginButton = styled.div`
+ padding: 20px 0px;
 `;

@@ -1,4 +1,5 @@
 const { parsed: localEnv } = require('dotenv').config();
+const withCSS = require('@zeit/next-css');
 
 /* eslint-disable */
 const webpack = require('webpack');
@@ -9,7 +10,12 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const { ANALYZE, ANALYZE_LOG } = process.env;
 
-module.exports = {
+
+if (typeof require !== 'undefined') {
+	require.extensions['.css'] = () => {};
+}
+
+module.exports = withCSS({
 	assetPrefix: localEnv.prefix,
 	webpack(config, { dev, isServer }) {
 		const config2 = config;
@@ -45,4 +51,4 @@ module.exports = {
 		);
 		return config2;
 	},
-};
+});

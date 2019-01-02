@@ -15,6 +15,7 @@
 				}
 			}
 		],
+		["import", { "libraryName": "antd", "style": "css" }],
 		["transform-react-remove-prop-types", { "removeImport": true }],
 		["babel-plugin-styled-components", { "ssr": true, "displayName": true, "preprocess": false }],
 		["inline-import", { "extensions": [".css"] }]

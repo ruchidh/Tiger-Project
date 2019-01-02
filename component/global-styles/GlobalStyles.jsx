@@ -5,44 +5,44 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'gt-eesti';
     font-style: normal;
     font-weight: 400;
-    src: url('/static/admin2/fonts/gt-eesti-regular.woff') format('woff');
+    src: url('/static/fonts/gt-eesti-regular.woff') format('woff');
   }
 
   @font-face {
     font-family: 'gt-eesti';
     font-style: normal;
     font-weight: 700;
-    src: url('/static/admin2/fonts/gt-eesti-medium.woff') format('woff');
+    src: url('/static/fonts/gt-eesti-medium.woff') format('woff');
   }
 
   @font-face {
     font-family: 'GreycliffCF-Regular';
-    src: url('/static/admin2/fonts/OTF/GreycliffCF-Regular.otf');
+    src: url('/static/fonts/OTF/GreycliffCF-Regular.otf');
   }
    
   @font-face {
     font-family: 'GreycliffCF-DemiBold';
-    src: url('/static/admin2/fonts/OTF/GreycliffCF-DemiBold.otf');
+    src: url('/static/fonts/OTF/GreycliffCF-DemiBold.otf');
   }
 
   @font-face {
     font-family: 'GreycliffCF-DemiBoldOblique';
-    src: url('/static/admin2/fonts/OTF/GreycliffCF-DemiBoldOblique.otf');
+    src: url('/static/fonts/OTF/GreycliffCF-DemiBoldOblique.otf');
   }
 
   @font-face {
     font-family: 'GreycliffCF-Bold';
-    src: url('/static/admin2/fonts/OTF/GreycliffCF-Bold.otf');
+    src: url('/static/fonts/OTF/GreycliffCF-Bold.otf');
   }
 
   @font-face {
     font-family: 'GreycliffCF-Medium';
-    src: url('/static/admin2/fonts/OTF/GreycliffCF-Medium.otf');
+    src: url('/static/fonts/OTF/GreycliffCF-Medium.otf');
   }
 
   @font-face {
     font-family: 'GreycliffCF-ExtraBold';
-    src: url('/static/admin2/fonts/OTF/GreycliffCF-ExtraBold.otf');
+    src: url('/static/fonts/OTF/GreycliffCF-ExtraBold.otf');
   }
 
   #__next {
