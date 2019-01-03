@@ -1,7 +1,7 @@
 import React from 'react';
 
+import commodityTypes from 'util/constants/commodity-types';
 import ControlSelect from '../form/ControlSelect';
-import commodityTypes from 'constants/commodity-types';
 
 const SelectCommodityMappingType = ({
 	value, multiple, filters, ...rest

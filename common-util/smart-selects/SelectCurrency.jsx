@@ -1,15 +1,15 @@
 import React from 'react';
 
+import currencies from 'util/constants/currencies';
 import ControlSelect from '../form/ControlSelect';
-import currencies from 'constants/currencies';
 
 const SelectCurrency = ({ value, ...rest }) => (
-  <ControlSelect
-    placeholder="Select Currency"
-    {...rest}
-    value={value || undefined}
-    options={currencies}
-  />
+	<ControlSelect
+		placeholder="Select Currency"
+		{...rest}
+		value={value || undefined}
+		options={currencies}
+	/>
 );
 
 export default SelectCurrency;

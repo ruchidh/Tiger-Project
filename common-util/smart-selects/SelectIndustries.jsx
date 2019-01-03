@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
+import industries from 'util/constants/industries.json';
 import ControlSelect from '../form/ControlSelect';
-import industries from 'constants/industries.json';
 
 class SelectIndustries extends Component {
-  componentDidMount() {}
+	componentDidMount() {}
 
-  render() {
-    const { value, ...rest } = this.props;
-    return (
-      <ControlSelect
-        placeholder="Select Industries"
-        {...rest}
-        value={value || undefined}
-        options={industries}
-      />
-    );
-  }
+	render() {
+		const { value, ...rest } = this.props;
+		return (
+			<ControlSelect
+				placeholder="Select Industries"
+				{...rest}
+				value={value || undefined}
+				options={industries}
+			/>
+		);
+	}
 }
 
 SelectIndustries.propTypes = {

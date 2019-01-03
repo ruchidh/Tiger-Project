@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import {
 	Input, InputNumber, Icon, Slider,
 } from 'antd';
-import InputFinancialAmount from './InputFinancialAmount';
+// import InputFinancialAmount from './InputFinancialAmount';
 
 function ControlInput(props) {
 	const { inputType, ...rest } = props;
 	switch (inputType) {
-		case 'financial-amount':
-			return <InputFinancialAmount {...rest} />;
+		// case 'financial-amount':
+		// 	return <InputFinancialAmount {...rest} />;
 		case 'number':
 			return <InputNumber {...rest} />;
 		case 'email':

@@ -23,9 +23,9 @@ request.interceptors.request.use(
 	},
 	(error) => {
 		if (process.browser) {
-			 toastr.error('Please try again, after some time', 'Some issue occurred!', {
-        displayDuration: 10000,
-      });
+			toaster.error('Please try again, after some time', 'Some issue occurred!', {
+				displayDuration: 10000,
+			});
 		}
 		return Promise.reject(error);
 	},
@@ -48,9 +48,9 @@ request.interceptors.response.use(
 				if (response.status === 401 && !window.location.href.includes('login')) {
 					window.location = '/login';
 				} else {
-                    toastr.error('Some error occurred, please try after some time', {
-                        displayDuration: 5000,
-                      });
+					toaster.error('Some error occurred, please try after some time', {
+						displayDuration: 5000,
+					});
 				}
 			}
 		}

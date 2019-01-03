@@ -1,7 +1,7 @@
 import React from 'react';
 
+import countryCode from 'util/constants/country-codes';
 import ControlSelect from '../form/ControlSelect';
-import countryCode from 'constants/country-codes';
 
 const SelectCountryCode = ({ value, ...rest }) => (
 	<ControlSelect
