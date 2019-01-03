@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
-import Btn from '../../../common-util/btn';
 import LoginDetails from '../LoginDetails';
 import {
 	H2, Container, LoginBox, Header, SubContainer, LoginButton,
@@ -11,7 +10,6 @@ class Login extends Component {
 	state = { type: 'Client', showDetails: false }
 
 	handleCheckLogin = (type) => {
-		console.log('handlechecklogin');
 		this.setState({ type, showDetails: true });
 	}
 

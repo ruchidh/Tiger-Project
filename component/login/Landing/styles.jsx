@@ -17,7 +17,7 @@ export const LoginBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40%;
+    width: 35%;
     height: 200px;
     margin: 3em auto;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);

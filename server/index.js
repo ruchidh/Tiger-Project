@@ -1,5 +1,6 @@
 const express = require('express');
 const compression = require('compression');
+const { prefix } = require('./config/prefix');
 
 const { app, handle } = require('./app');
 const routes = require('./routes');
@@ -10,8 +11,12 @@ app
 		const server = express();
 
 		server.use(compression());
+		server.use(prefix);
 
 		server.use('/', routes);
+
+		server.use('/app', routes);
+		server.use('/app/*', routes);
 		server.get('/*', (req, res) => handle(req, res));
 
 		server.listen(process.env.PORT, (err) => {
