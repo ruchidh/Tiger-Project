@@ -3,14 +3,17 @@ import styled from 'styled-components';
 export const Panel = styled.div`
    width: 40%;
    min-width: 320px;
-   margin: 3em auto;
    background: #ffffff;
    font-family: GreyCliffCF-DemiBold;
-   font-size: 1rem;
+   font-size: 110%;
    font-weight: 400;
    line-height: 1.5;
    color: #212529;
    padding: 32px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
 `;
 
 export const Info = styled.a`
@@ -33,17 +36,17 @@ export const Footer = styled.div`
    margin-top: 10px;
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
 `;
 
 export const BackIcon = styled.img`
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
 `;
 
 export const BackButton = styled.a`
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	text-decoration: none;
 	font-family: GreycliffCF-Bold;

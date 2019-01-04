@@ -65,7 +65,7 @@ class LoginDetails extends Component {
 					style={{ padding: '16px 0px' }}
 					submitText="SUBMIT"
 					controls={controls}
-					onSubmit={v => this.handlePasswordSubmit(v)}
+					onSubmit={this.handlePasswordSubmit}
 					buttonsize="large"
 					values={{}}
 					block
@@ -115,7 +115,7 @@ class LoginDetails extends Component {
 							style={{ padding: '16px 0px' }}
 							submitText="LOGIN"
 							controls={controls}
-							onSubmit={v => this.handleSubmit(v)}
+							onSubmit={this.handleSubmit}
 							buttonsize="large"
 							values={{}}
 							block
@@ -158,4 +158,4 @@ LoginDetails.defaultProps = {
 	handleOtherLogin: () => {},
 };
 
-export default LoginDetails;
+export default React.memo(LoginDetails);

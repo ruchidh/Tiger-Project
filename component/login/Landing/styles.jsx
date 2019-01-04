@@ -19,6 +19,7 @@ export const LoginBox = styled.div`
     justify-content: space-between;
     width: 35%;
     height: 200px;
+    min-height:100px;
     margin: 3em auto;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     background-color: #fff;

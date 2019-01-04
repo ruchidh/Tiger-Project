@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { whyDidYouUpdate } from 'why-did-you-update';
 import { Provider } from 'react-redux';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
@@ -31,6 +31,9 @@ class MyApp extends App {
 
 	render() {
 		const { Component, store, pageProps } = this.props;
+		if (process.env.NODE_ENV !== 'production') {
+			whyDidYouUpdate(React);
+		  }
 		return (
 			<Container>
 				<Head>
