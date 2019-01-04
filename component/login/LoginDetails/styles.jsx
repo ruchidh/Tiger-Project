@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Panel = styled.div`
    width: 40%;
+   min-width: 320px;
    margin: 3em auto;
    background: #ffffff;
    font-family: GreyCliffCF-DemiBold;
