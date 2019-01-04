@@ -15,6 +15,8 @@ function ControlInput(props) {
 			return <InputNumber {...rest} />;
 		case 'email':
 			return <Input {...rest} prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} />;
+		case 'password':
+			return <Input type="password" {...rest} prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} />;
 		case 'textarea':
 			return <Input.TextArea {...rest} />;
 		case 'slider':

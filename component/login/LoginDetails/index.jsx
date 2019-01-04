@@ -45,7 +45,6 @@ class LoginDetails extends Component {
 				inputType: 'password',
 				label: 'Password',
 				name: 'password',
-				prefix: <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />,
 				placeholder: 'Enter your password',
 				rules: [{ required: true, message: 'Password is required' }],
 			},
@@ -84,7 +83,6 @@ class LoginDetails extends Component {
 				label: 'Email',
 				name: 'email',
 				placeholder: 'Enter your email',
-				// prefix: <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />,
 				rules: [
 					{ required: true, message: 'Email id is required' },
 					{
@@ -96,9 +94,8 @@ class LoginDetails extends Component {
 			{
 				type: 'input',
 				inputType: 'password',
-				label: 'password',
+				label: 'Password',
 				name: 'password',
-				prefix: <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />,
 				placeholder: 'Enter your password',
 				rules: [{ required: true, message: 'Password is required' }],
 			},
