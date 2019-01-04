@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DataForm from 'common-util/form/DataForm';
 import { Icon } from 'antd';
 import {
-	Panel, Info, H2, Footer,
+	Panel, Info, H2, Footer, BackButton, BackIcon,
 } from './styles';
 
 class LoginDetails extends Component {
@@ -22,6 +22,7 @@ class LoginDetails extends Component {
 	}
 
 	renderPassword = () => {
+		const { handleBack } = this.props;
 		const controls = [
 			{
 				type: 'select',
@@ -59,7 +60,7 @@ class LoginDetails extends Component {
 		];
 		return (
 			<>
-				<H2> Recover Account </H2>
+				<H2> <Icon type="unlock" />  Recover Account </H2>
 				<DataForm
 					style={{ padding: '16px 0px' }}
 					submitText="SUBMIT"
@@ -69,6 +70,10 @@ class LoginDetails extends Component {
 					values={{}}
 					block
 				/>
+				<BackButton onClick={handleBack}>
+					<BackIcon src="/static/images/back_dark.svg" />
+						Back To Login
+				</BackButton>
 			</>
 		);
 	};
