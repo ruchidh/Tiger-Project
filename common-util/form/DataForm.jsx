@@ -78,9 +78,11 @@ class DataForm extends Component {
 			formType,
 			editMode,
 			values,
+			block,
+			buttonsize,
 		} = this.props;
 		const { editing } = this.state;
-		const formItemLayout =			layout === 'horizontal' ? { labelCol: { span: 4 }, wrapperCol: { span: 10 } } : null;
+		const formItemLayout =	layout === 'horizontal' ? { labelCol: { span: 4 }, wrapperCol: { span: 10 } } : null;
 
 		return controls.length > 0 ? (
 			<>
@@ -132,7 +134,7 @@ class DataForm extends Component {
 							</Button>
 						) : null}
 						{!editMode || (editMode && editing) ? (
-							<Button loading={loading} type="primary" htmlType="submit">
+							<Button loading={loading} type="primary" htmlType="submit" block={block || false} size={buttonsize}>
 								{submitText || 'Submit'}
 							</Button>
 						) : null}

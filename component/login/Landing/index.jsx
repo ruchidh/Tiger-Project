@@ -7,20 +7,33 @@ import {
 } from './styles';
 
 class Login extends Component {
-	state = { type: 'Client', showDetails: false }
+	state = { type: 'Client', showDetails: false };
 
 	handleCheckLogin = (type) => {
 		this.setState({ type, showDetails: true });
-	}
+	};
+
+	handleBack = () => {
+		this.setState({ showDetails: false });
+	};
+
+	handleOtherLogin = () => {
+		this.setState((prevState) => {
+			const newType = prevState.type === 'Client' ? 'Vendor' : 'Client';
+			return { type: newType };
+		});
+	};
 
 	renderLoginBox = type => (
 		<LoginBox>
 			<H2> {type} </H2>
 			<LoginButton>
-				<Button type="primary" onClick={() => this.handleCheckLogin(type)}>LOGIN</Button>
+				<Button type="primary" onClick={() => this.handleCheckLogin(type)} size="large">
+					LOGIN
+				</Button>
 			</LoginButton>
 		</LoginBox>
-	)
+	);
 
 	render() {
 		const { type, showDetails } = this.state;
@@ -28,13 +41,18 @@ class Login extends Component {
 			<Container>
 				<Header> Tiger Project </Header>
 				<SubContainer>
-					{ !showDetails
-						? <>
+					{!showDetails ? (
+						<>
 							{this.renderLoginBox('Client')}
 							{this.renderLoginBox('Vendor')}
-				          </>
-						: <LoginDetails type={type} />
-					}
+						</>
+					) : (
+						<LoginDetails
+							type={type}
+							handleBack={this.handleBack}
+							handleOtherLogin={this.handleOtherLogin}
+						/>
+					)}
 				</SubContainer>
 			</Container>
 		);
