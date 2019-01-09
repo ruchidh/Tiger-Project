@@ -15,7 +15,7 @@ const request = axios.create({
 const { CancelToken } = axios;
 
 request.interceptors.request.use(
-	(request) => {
+	(response) => {
 		if (process.browser) {
 			start();
 		}
