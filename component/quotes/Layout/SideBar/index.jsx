@@ -7,34 +7,21 @@ const { SubMenu } = Menu;
 
 class SideBar extends Component {
 	state = {
-		mode: 'inline',
-		theme: 'light',
 	};
 
-	changeMode = (value) => {
-		this.setState({
-			mode: value ? 'vertical' : 'inline',
-		});
-	};
-
-	changeTheme = (value) => {
-		this.setState({
-			theme: value ? 'dark' : 'light',
-		});
-	};
 
 	render() {
 		return (
 			<Container>
-				<h2> NEW ENQUIRY</h2>
+				<h3> NEW ENQUIRY</h3>
 				<Menu
-					style={{ background: 'transparent', textAlign: 'left' }}
+					className="menu"
 					defaultSelectedKeys={['1']}
 					defaultOpenKeys={['sub1']}
-					mode={this.state.mode}
-					theme={this.state.theme}
+					mode="inline"
+					theme="light"
 				>
-					<Menu.Item key="1">
+					<Menu.Item key="1" className="active">
 						<Icon type="mail" />
 						Reference
 					</Menu.Item>
@@ -44,7 +31,7 @@ class SideBar extends Component {
 					</Menu.Item>
 					<Menu.Item key="3">
 						<Icon type="calendar" />
-
+                      Mode
 					</Menu.Item>
 					<Menu.Item key="4">
 						<Icon type="calendar" />

@@ -11,7 +11,6 @@ import { Container } from './styles';
 class Quotes extends Component {
 	state = { type: 'Client', showDetails: false };
 
-
 	render() {
 		// const { type, showDetails } = this.state;
 		return (
