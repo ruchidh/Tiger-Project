@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Form, Input } from 'antd';
 import { Section, Title } from '../styles';
 
-class Reference extends Component {
+class WeightVolume extends Component {
 	state = {};
 
 	render() {
@@ -23,4 +23,4 @@ class Reference extends Component {
 	}
 }
 
-export default Reference;
+export default WeightVolume;

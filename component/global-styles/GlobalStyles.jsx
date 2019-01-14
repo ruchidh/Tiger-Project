@@ -120,6 +120,23 @@ th {
 
   .ant-input {
     resize: none;
+    border: 1px solid #c8d6e5;
+    border-radius: unset;
+  }
+
+  .ant-select-selection {
+    border: 1px solid #c8d6e5;
+    border-radius: unset;
+  }
+
+  .ant-input-number {
+    border: 1px solid #c8d6e5;
+    border-radius: unset;
+  }
+
+  .ant-input-group-addon {
+    border: 1px solid #c8d6e5;
+    border-radius: unset;
   }
 
   .tippy-popper {

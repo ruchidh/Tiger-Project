@@ -7,8 +7,9 @@ import Footer from './Layout/Footer';
 import SideBar from './Layout/SideBar';
 import Reference from './Reference';
 import Mode from './Mode';
-// import Mode from '../Mode';
-// import Reference from '../Weight&Volumne';
+// import WeightVolumne from '../WeightVolumne';
+import ServiceAddress from './ServiceAddress';
+
 // import Reference from './Reference';
 // import Reference from './Reference';
 import { Container, Body } from './styles';
@@ -22,16 +23,18 @@ class Quotes extends Component {
 		const { getFieldDecorator } = form;
 		// const { type, showDetails } = this.state;
 		return (
-			<Container>
-				<Form layout="vertical">
+			<Form layout="vertical">
+				<Container>
 					<SideBar />
 					<Body>
 						<Reference getFieldDecorator={getFieldDecorator} />
 						<Mode getFieldDecorator={getFieldDecorator} />
+						<ServiceAddress getFieldDecorator={getFieldDecorator} />
 					</Body>
 					<Footer />
-				</Form>
-			</Container>
+				</Container>
+			</Form>
+
 		);
 	}
 }

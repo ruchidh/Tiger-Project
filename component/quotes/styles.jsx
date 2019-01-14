@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: #f5f7fa;
-  height: 100vh;
   padding: 16px 0px;
   width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const Title = styled.div`
@@ -16,8 +18,9 @@ margin-bottom: 10px;
 `;
 
 export const Body = styled.div`
+ max-height: calc(100vh -20px);
+ overflow: scroll;
  background: white;
- height: 100%;
  padding: 16px;
  width: 82%;
  float: right;
@@ -26,5 +29,8 @@ export const Body = styled.div`
 `;
 
 export const Section = styled.div`
-  
+   .ant-radio-button-wrapper{
+     height: 65px;
+     line-height: 32px;
+   }
 `;
