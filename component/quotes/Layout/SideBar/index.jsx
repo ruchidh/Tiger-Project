@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { Menu, Icon } from 'antd';
 
-import { Container } from './styles';
-
-const { SubMenu } = Menu;
+import { Container, H3 } from './styles';
 
 class SideBar extends Component {
 	state = {
 	};
 
-
 	render() {
 		return (
 			<Container>
-				<h3> NEW ENQUIRY</h3>
+				<H3> NEW ENQUIRY</H3>
 				<Menu
 					className="menu"
 					defaultSelectedKeys={['1']}

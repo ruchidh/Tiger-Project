@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: fixed;
-  top: 16px;
-  left: 16px;
   color: white;
-  z-index: 500;
+  display: inline-block;
   text-align: center;
   width: 15%;
+  float:left;
 
   .menu {
     background: transparent;
@@ -28,4 +26,9 @@ export const Container = styled.div`
       border-right: 0;
     }
   }
+`;
+
+export const H3 = styled.h3`
+text-align: left;
+padding: 0px 20px;
 `;

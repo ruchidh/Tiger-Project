@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
 import {
-	Form, Button as AntButton, Checkbox,
+	Form,
 } from 'antd';
 import PropTypes from 'prop-types';
 import Footer from './Layout/Footer';
 import SideBar from './Layout/SideBar';
-import { Container } from './styles';
+import Reference from './Reference';
+import Mode from './Mode';
+// import Mode from '../Mode';
+// import Reference from '../Weight&Volumne';
+// import Reference from './Reference';
+// import Reference from './Reference';
+import { Container, Body } from './styles';
 
 
 class Quotes extends Component {
-	state = { type: 'Client', showDetails: false };
+	state = { };
 
 	render() {
+		const { form } = this.props;
+		const { getFieldDecorator } = form;
 		// const { type, showDetails } = this.state;
 		return (
 			<Container>
-				<Form>  <SideBar /> <Footer />  </Form>
+				<Form layout="vertical">
+					<SideBar />
+					<Body>
+						<Reference getFieldDecorator={getFieldDecorator} />
+						<Mode getFieldDecorator={getFieldDecorator} />
+					</Body>
+					<Footer />
+				</Form>
 			</Container>
 		);
 	}
